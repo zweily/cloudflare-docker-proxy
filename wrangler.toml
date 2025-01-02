@@ -16,15 +16,15 @@ CUSTOM_DOMAIN = "exmaple.com"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.my-studio.net", custom_domain = true },
-#   { pattern = "quay.my-studio.net", custom_domain = true },
-#   { pattern = "gcr.my-studio.net", custom_domain = true },
-#   { pattern = "k8s-gcr.my-studio.net", custom_domain = true },
-#   { pattern = "k8s.my-studio.net", custom_domain = true },
-#   { pattern = "ghcr.my-studio.net", custom_domain = true },
-#   { pattern = "cloudsmith.my-studio.net", custom_domain = true },
-# ]
+routes = [
+   { pattern = "docker.my-studio.net", custom_domain = true },
+   { pattern = "quay.my-studio.net", custom_domain = true },
+   { pattern = "gcr.my-studio.net", custom_domain = true },
+   { pattern = "k8s-gcr.my-studio.net", custom_domain = true },
+   { pattern = "k8s.my-studio.net", custom_domain = true },
+   { pattern = "ghcr.my-studio.net", custom_domain = true },
+   { pattern = "cloudsmith.my-studio.net", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
@@ -32,7 +32,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-# route = { pattern = "docker-staging.my-studio.net", custom_domain = true }
+route = { pattern = "docker-staging.my-studio.net", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
